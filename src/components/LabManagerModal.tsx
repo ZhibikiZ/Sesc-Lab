@@ -154,7 +154,7 @@ export const LabManagerModal: React.FC<LabManagerModalProps> = ({
     Object.entries(groupedByDate).forEach(([dateStr, list]) => {
       text += `📍 *${formatShortDatePtBR(dateStr)}*:\n`;
       list.forEach((b) => {
-        const shiftLabel = b.shift === 'matutino' ? 'Manhã' : 'Tarde';
+        const shiftLabel = b.shift === 'matutino' ? 'Matutino' : 'Vespertino';
         text += ` • ${shiftLabel} - Aula ${b.lessonNumber}: ${b.teacherName} (${b.subject} - ${b.grade || 'Geral'})\n`;
       });
       text += `\n`;

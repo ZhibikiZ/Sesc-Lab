@@ -260,7 +260,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                     }`}
                   >
                     <Sun className={`w-3.5 h-3.5 ${shift === 'matutino' ? 'text-white' : 'text-amber-500'}`} />
-                    Matutino (Manhã)
+                    Matutino
                   </button>
                   <button
                     type="button"
@@ -273,7 +273,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                     }`}
                   >
                     <Sunset className={`w-3.5 h-3.5 ${shift === 'vespertino' ? 'text-white' : 'text-orange-500'}`} />
-                    Vespertino (Tarde)
+                    Vespertino
                   </button>
                 </div>
               </div>
@@ -293,7 +293,7 @@ export const BookingFormModal: React.FC<BookingFormModalProps> = ({
                   <label className="text-xs font-medium text-slate-700 flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5 text-slate-500" />
                     <span>
-                      Selecione a Aula ({shift === 'matutino' ? 'Turno da Manhã: 5 aulas' : 'Turno da Tarde: 3 aulas'}):
+                      Selecione a Aula ({shift === 'matutino' ? 'Matutino: 5 aulas' : 'Vespertino: 3 aulas'}):
                     </span>
                   </label>
                 </div>
