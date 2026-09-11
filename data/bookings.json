@@ -1,0 +1,100 @@
+[
+  {
+    "id": "seed-1",
+    "date": "2026-09-07",
+    "shift": "matutino",
+    "lessonNumber": 2,
+    "teacherName": "Prof. Carlos Silva",
+    "subject": "Matemática",
+    "grade": "8º Ano A",
+    "activityDescription": "Atividade prática de Geometria e gráficos com planilhas",
+    "equipment": [
+      "Projetor / DataShow",
+      "Acesso à Internet / Pesquisa"
+    ],
+    "studentCount": 28,
+    "notes": "Precisamos de 28 computadores ligados.",
+    "createdAt": "2026-09-11T14:14:06.408Z"
+  },
+  {
+    "id": "seed-2",
+    "date": "2026-09-08",
+    "shift": "matutino",
+    "lessonNumber": 3,
+    "teacherName": "Profª. Mariana Souza",
+    "subject": "Ciências",
+    "grade": "7º Ano B",
+    "activityDescription": "Laboratório virtual de anatomia celular e simulação microscópica",
+    "equipment": [
+      "Acesso à Internet / Pesquisa",
+      "Fones de Ouvido"
+    ],
+    "studentCount": 30,
+    "notes": "Os fones de ouvido são essenciais para os vídeos.",
+    "createdAt": "2026-09-11T14:14:06.408Z"
+  },
+  {
+    "id": "seed-3",
+    "date": "2026-09-08",
+    "shift": "vespertino",
+    "lessonNumber": 1,
+    "teacherName": "Prof. Roberto Mendes",
+    "subject": "História",
+    "grade": "9º Ano A",
+    "activityDescription": "Pesquisa guiada sobre a Era Vargas e elaboração de linha do tempo",
+    "equipment": [
+      "Acesso à Internet / Pesquisa",
+      "Softwares de Escritório (Office/Docs)"
+    ],
+    "studentCount": 26,
+    "notes": "",
+    "createdAt": "2026-09-11T14:14:06.408Z"
+  },
+  {
+    "id": "seed-4",
+    "date": "2026-09-09",
+    "shift": "matutino",
+    "lessonNumber": 1,
+    "teacherName": "Profª. Fernanda Lima",
+    "subject": "Língua Portuguesa",
+    "grade": "1º Ano EM",
+    "activityDescription": "Redação orientada e pesquisa sobre gêneros textuais contemporâneos",
+    "equipment": [
+      "Softwares de Escritório (Office/Docs)"
+    ],
+    "studentCount": 31,
+    "notes": "",
+    "createdAt": "2026-09-11T14:14:06.408Z"
+  },
+  {
+    "id": "seed-5",
+    "date": "2026-09-10",
+    "shift": "vespertino",
+    "lessonNumber": 2,
+    "teacherName": "Prof. André Santos",
+    "subject": "Robótica & Tecnologia",
+    "grade": "6º Ano B",
+    "activityDescription": "Introdução à lógica de blocos com Scratch",
+    "equipment": [
+      "Scratch / Programação",
+      "Caixas de Som"
+    ],
+    "studentCount": 24,
+    "notes": "Verificar se o site do Scratch está liberado no firewall.",
+    "createdAt": "2026-09-11T14:14:06.408Z"
+  },
+  {
+    "id": "seed-6",
+    "date": "2026-09-11",
+    "shift": "matutino",
+    "lessonNumber": 5,
+    "teacherName": "Coordenação Pedagógica",
+    "subject": "Manutenção / Atualização de Softwares",
+    "grade": "Geral",
+    "activityDescription": "Atualização periódica dos navegadores e antivírus dos terminais",
+    "equipment": [],
+    "isMaintenance": true,
+    "notes": "Laboratório reservado para manutenção técnica.",
+    "createdAt": "2026-09-11T14:14:06.408Z"
+  }
+]

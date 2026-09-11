@@ -1,0 +1,8 @@
+{
+  "name": "Agendamento do Laboratório de Informática",
+  "description": "Sistema de agendamento de aulas no laboratório de informática para professores nos turnos matutino e vespertino com visualização em tempo real de horários livres e ocupados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
