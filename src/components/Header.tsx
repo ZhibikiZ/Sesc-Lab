@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   Share2,
   Shield,
+  Printer,
 } from 'lucide-react';
 import { ShiftType } from '../types';
 
@@ -24,6 +25,8 @@ interface HeaderProps {
   onSearchChange: (q: string) => void;
   onOpenNewBooking: () => void;
   onOpenLabManager: () => void;
+  onPrintSchedule: () => void;
+  onOpenPrintPreview?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -36,6 +39,8 @@ export const Header: React.FC<HeaderProps> = ({
   onSearchChange,
   onOpenNewBooking,
   onOpenLabManager,
+  onPrintSchedule,
+  onOpenPrintPreview,
 }) => {
   return (
     <header className="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-30 shadow-md">
@@ -62,6 +67,30 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5">
+            <div className="inline-flex rounded-xl border border-slate-700 bg-slate-800 shadow-xs">
+              <button
+                type="button"
+                id="print-schedule-btn"
+                onClick={onPrintSchedule}
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-l-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 transition border-r border-slate-700/80"
+                title="Imprimir Cronograma da Semana (Abre o diálogo de impressão do navegador)"
+              >
+                <Printer className="w-4 h-4 text-emerald-400" />
+                <span>Imprimir Cronograma</span>
+              </button>
+              {onOpenPrintPreview && (
+                <button
+                  type="button"
+                  id="print-preview-btn"
+                  onClick={onOpenPrintPreview}
+                  className="px-2.5 py-2 rounded-r-xl text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-700 transition"
+                  title="Pré-visualizar folha de impressão e opções"
+                >
+                  Prévia
+                </button>
+              )}
+            </div>
+
             <button
               type="button"
               id="open-manager-btn"

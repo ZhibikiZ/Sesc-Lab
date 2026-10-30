@@ -1,0 +1,71 @@
+{
+  "entities": {
+    "Booking": {
+      "title": "Booking",
+      "description": "Represents a laboratory lesson booking by a teacher or maintenance slot.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the booking."
+        },
+        "date": {
+          "type": "string",
+          "description": "The date of the booking in YYYY-MM-DD format."
+        },
+        "shift": {
+          "type": "string",
+          "enum": ["matutino", "vespertino"],
+          "description": "School shift for the reservation."
+        },
+        "lessonNumber": {
+          "type": "number",
+          "description": "Lesson period index (1 to 5 for matutino, 1 to 3 for vespertino)."
+        },
+        "teacherName": {
+          "type": "string",
+          "description": "Name of the reserving teacher or department."
+        },
+        "subject": {
+          "type": "string",
+          "description": "Subject or class topic."
+        },
+        "grade": {
+          "type": "string",
+          "description": "Grade or class group."
+        },
+        "activityDescription": {
+          "type": "string",
+          "description": "Short description of the pedagogical activity."
+        },
+        "equipment": {
+          "type": "array",
+          "description": "List of special equipment requested."
+        },
+        "studentCount": {
+          "type": "number",
+          "description": "Approximate number of students."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes or setup instructions."
+        },
+        "isMaintenance": {
+          "type": "boolean",
+          "description": "Whether the slot is blocked for technical lab maintenance."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp when the booking was created."
+        }
+      },
+      "required": ["date", "shift", "lessonNumber", "teacherName"]
+    }
+  },
+  "firestore": {
+    "/bookings/{bookingId}": {
+      "schema": "Booking",
+      "description": "Global collection of all laboratory bookings accessible to school teachers and coordinator."
+    }
+  }
+}

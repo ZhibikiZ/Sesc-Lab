@@ -33,10 +33,13 @@ export function formatShortDatePtBR(dateKey: string): string {
 
 export function getMondayOfWeek(d: Date): Date {
   const date = new Date(d);
+  // Normalize time to midday (12:00:00) so timezone offsets or DST transitions never flip the day
+  date.setHours(12, 0, 0, 0);
   const day = date.getDay();
   // day: 0 is Sun, 1 is Mon, 2 is Tue, etc.
   const diff = date.getDate() - day + (day === 0 ? -6 : 1);
-  return new Date(date.setDate(diff));
+  date.setDate(diff);
+  return date;
 }
 
 export function getWeekDays(referenceDate: Date, includeSaturday = false): { dateKey: string; date: Date; isToday: boolean }[] {
@@ -48,6 +51,7 @@ export function getWeekDays(referenceDate: Date, includeSaturday = false): { dat
   for (let i = 0; i < daysCount; i++) {
     const current = new Date(monday);
     current.setDate(monday.getDate() + i);
+    current.setHours(12, 0, 0, 0);
     const key = formatDateKey(current);
     days.push({
       dateKey: key,
@@ -62,4 +66,12 @@ export function getWeekDays(referenceDate: Date, includeSaturday = false): { dat
 export function isPastDate(dateKey: string): boolean {
   const todayKey = formatDateKey(new Date());
   return dateKey < todayKey;
+}
+
+export function formatDatePtBR(dateKey: string): string {
+  const parts = dateKey.split('-');
+  if (parts.length === 3) {
+    return `${parts[2]}/${parts[1]}/${parts[0]}`;
+  }
+  return dateKey;
 }
